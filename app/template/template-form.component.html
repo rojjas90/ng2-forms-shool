@@ -1,4 +1,9 @@
-<form action="">
+<div class="jumbotron text-center" *ngIf="submitted">
+     <h2>Thanks for your submission!</h2>
+     <p>We appreciate it!</p>
+</div>
+
+<form (ngSubmit)="processForm()" *ngIf="!submitted">
      <div class="form-group">
           <label for="">Name</label>
           <input type="text" class="form-control" name="name" required [(ngModel)]="user.name">

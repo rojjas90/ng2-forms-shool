@@ -14,11 +14,12 @@ var User = (function () {
 exports.User = User;
 var TemplateFormComponent = (function () {
     function TemplateFormComponent() {
+        this.submitted = false; // check if the form is submitted
     }
     TemplateFormComponent.prototype.ngOnInit = function () {
         this.user = {
-            name: "",
-            username: ""
+            name: "Rojas",
+            username: "grojas"
         };
     };
     Object.defineProperty(TemplateFormComponent.prototype, "diagnostic", {
@@ -28,6 +29,12 @@ var TemplateFormComponent = (function () {
         enumerable: true,
         configurable: true
     });
+    TemplateFormComponent.prototype.processForm = function () {
+        console.log(this.user);
+        this.submitted = true;
+        // create a user
+        // this.service.createService(this.user)...
+    };
     return TemplateFormComponent;
 }());
 TemplateFormComponent = __decorate([
