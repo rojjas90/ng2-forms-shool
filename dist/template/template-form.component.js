@@ -6,9 +6,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+var User = (function () {
+    function User() {
+    }
+    return User;
+}());
+exports.User = User;
 var TemplateFormComponent = (function () {
     function TemplateFormComponent() {
     }
+    TemplateFormComponent.prototype.ngOnInit = function () {
+        this.user = {
+            name: "",
+            username: ""
+        };
+    };
+    Object.defineProperty(TemplateFormComponent.prototype, "diagnostic", {
+        get: function () {
+            return JSON.stringify(this.user);
+        },
+        enumerable: true,
+        configurable: true
+    });
     return TemplateFormComponent;
 }());
 TemplateFormComponent = __decorate([
