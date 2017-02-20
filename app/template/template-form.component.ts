@@ -8,7 +8,7 @@ export class User {
 @Component(
     {
         selector: "template-form",
-        // styleUrls: ["./app/template/template-form.component.css"],
+        styleUrls: ["./app/template/template-form.component.css"],
         templateUrl: "./app/template/template-form.component.html"
     }
 )

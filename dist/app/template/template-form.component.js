@@ -40,7 +40,7 @@ var TemplateFormComponent = (function () {
 TemplateFormComponent = __decorate([
     core_1.Component({
         selector: "template-form",
-        // styleUrls: ["./app/template/template-form.component.css"],
+        styleUrls: ["./app/template/template-form.component.css"],
         templateUrl: "./app/template/template-form.component.html"
     })
 ], TemplateFormComponent);
