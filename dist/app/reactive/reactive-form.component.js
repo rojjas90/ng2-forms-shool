@@ -6,18 +6,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.message = "This is the sample message.";
+var ReactiveFormComponent = (function () {
+    function ReactiveFormComponent() {
     }
-    return AppComponent;
+    ReactiveFormComponent.prototype.construtor = function () { };
+    ReactiveFormComponent.prototype.ngOnInit = function () {
+        // build our form
+    };
+    ReactiveFormComponent.prototype.processForm = function () {
+        console.log("processing");
+    };
+    return ReactiveFormComponent;
 }());
-AppComponent = __decorate([
+ReactiveFormComponent = __decorate([
     core_1.Component({
-        selector: "my-app",
-        styles: ["\n\n  "],
-        template: "\n\n    <h2>Template form</h2>\n    <template-form></template-form>\n\n    <h2>Reactive form</h2>\n    <reactive-form></reactive-form>\n  "
+        selector: "reactive-form",
+        templateUrl: "./app/reactive/reactive-form.component.html"
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], ReactiveFormComponent);
+exports.ReactiveFormComponent = ReactiveFormComponent;
+//# sourceMappingURL=reactive-form.component.js.map

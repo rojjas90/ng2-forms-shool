@@ -16,7 +16,7 @@ AppComponent = __decorate([
     core_1.Component({
         selector: "my-app",
         styles: ["\n\n  "],
-        template: "\n    \n    <h2>Template form</h2>\n    <template-form></template-form>\n\n  "
+        template: "\n\n    <h2>Template form</h2>\n    <template-form></template-form>\n\n    <h2>Reactive form</h2>\n    <reactive-form></reactive-form>\n  "
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
