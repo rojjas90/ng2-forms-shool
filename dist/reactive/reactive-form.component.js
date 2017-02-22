@@ -6,15 +6,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
 var ReactiveFormComponent = (function () {
     function ReactiveFormComponent() {
     }
     ReactiveFormComponent.prototype.construtor = function () { };
     ReactiveFormComponent.prototype.ngOnInit = function () {
         // build our form
+        this.form = new forms_1.FormGroup({
+            name: new forms_1.FormControl(""),
+            username: new forms_1.FormControl("")
+        });
+        console.log(this.form);
     };
     ReactiveFormComponent.prototype.processForm = function () {
-        console.log("processing");
+        console.log("processing", this.form.value);
     };
     return ReactiveFormComponent;
 }());

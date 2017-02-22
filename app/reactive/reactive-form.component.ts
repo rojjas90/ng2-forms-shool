@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 
 @Component({
@@ -7,13 +8,21 @@ import { Component, OnInit } from "@angular/core";
 })
 export class ReactiveFormComponent implements OnInit {
 
+    form: FormGroup;
+
     construtor() { }
 
     ngOnInit() {
         // build our form
+        this.form = new FormGroup({
+            name: new FormControl(""),
+            username: new FormControl("")
+        });
+
+        console.log(this.form);
     }
 
     processForm() {
-        console.log("processing");
+        console.log("processing", this.form.value);
     }
 }
